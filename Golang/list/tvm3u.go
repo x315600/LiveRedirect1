@@ -9,7 +9,8 @@ type Tvm3u struct {
 }
 
 func (t *Tvm3u) GetTvM3u(c *gin.Context) {
-	fmt.Fprintln(c.Writer, "#EXTM3U x-tvg-url=\"https://epg.v1.mk/fy.xml\"")
+	//fmt.Fprintln(c.Writer, "#EXTM3U x-tvg-url=\"https://epg.v1.mk/fy.xml\"")
+	fmt.Fprintln(c.Writer, "#EXTM3U x-tvg-url=\"https://assets.livednow.com/epg.xml\"")
 	
 	fmt.Fprintln(c.Writer, "#EXTINF:-1,tvg-id=\"CCTV1\" tvg-name=\"CCTV1\" tvg-logo=\"https://epg.v1.mk/logo/CCTV1.png\" group-title=\"央视\",CCTV-1")
 	fmt.Fprintln(c.Writer, "http://"+c.Request.Host+"/ysptp/cctv1.m3u8")
