@@ -45,15 +45,15 @@ func getTestVideoUrl(c *gin.Context) {
 	str_time := time.Now().In(TimeLocation).Format("2006-01-02 15:04:05")
 	fmt.Fprintln(c.Writer, "#EXTM3U")
 	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\""+str_time+"\" tvg-logo=\"https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/tg.jpg\" group-title=\"列表更新时间\","+str_time)
-	fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/time/time.mp4")
-	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
-	fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/sdr4kvideo/index.m3u8")
-	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PHLG-HEVC-EAC3测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/tg.jpg\" group-title=\"4K频道\",4K60PHLG-HEVC-EAC3测试")
-	fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/hlg4kvideo/index.m3u8")
+	//fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/time/time.mp4")
+	//fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
+	//fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/sdr4kvideo/index.m3u8")
+	//fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PHLG-HEVC-EAC3测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/tg.jpg\" group-title=\"4K频道\",4K60PHLG-HEVC-EAC3测试")
+	//fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/hlg4kvideo/index.m3u8")
 }
 
 func getLivePrefix(c *gin.Context) string {
-	firstUrl := c.DefaultQuery("url", "https://www.goodiptv.club")
+	firstUrl := c.DefaultQuery("url", "https://ys.315600.xyz")
 	realUrl, _ := url.QueryUnescape(firstUrl)
 	return realUrl
 }
